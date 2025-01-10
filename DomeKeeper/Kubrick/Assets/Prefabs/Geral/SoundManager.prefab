@@ -1,0 +1,653 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3528802735955645632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6629623079103015712}
+  - component: {fileID: 5097843477314443169}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6629623079103015712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3528802735955645632}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5097843477314443169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3528802735955645632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9824a875151cec64e8dea314c6eb25cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PlayerStep1
+    clip: {fileID: 8300000, guid: 1a696e0e465a88946a14375cc70b5000, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerStep2
+    clip: {fileID: 8300000, guid: 63859c3b179b2fb449dc2d7ce1850047, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerStep3
+    clip: {fileID: 8300000, guid: 0a2742eda23cd244a88188ae3ce9de00, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerStep4
+    clip: {fileID: 8300000, guid: 9e94c98d0f5bdf149954ca4933c4632a, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerStep5
+    clip: {fileID: 8300000, guid: add1cc9e9fe11f744a75dca93172eec1, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "Pe\xE7a1"
+    clip: {fileID: 8300000, guid: 2e778fc13d2a4d54fbe8f4fd18b300cd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CutPaper1
+    clip: {fileID: 8300000, guid: a48d1b54c1e751d4faeb5ada123aba2c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Interruptor1
+    clip: {fileID: 8300000, guid: 30f976ca0fab7c5408d5ec95b40341aa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Solda1
+    clip: {fileID: 8300000, guid: afde92d29bb9f994690fce1ae40c90c5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Acerto1
+    clip: {fileID: 8300000, guid: 819f1985b802a53438f28fe230daab32, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lever1
+    clip: {fileID: 8300000, guid: 549ea449bd3e4844cb644d73694f3e31, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lever2
+    clip: {fileID: 8300000, guid: bf0ea4358cc1f0a4998f673bbb52cb50, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lever3
+    clip: {fileID: 8300000, guid: 67a27609e4b37324bacb9a78d61c0e29, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lever4
+    clip: {fileID: 8300000, guid: 9e3765c9e48e2204fafe9a1ea32f2c9c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Crank1
+    clip: {fileID: 8300000, guid: d4edae631ba991c4eb435e0d87534248, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Crank2
+    clip: {fileID: 8300000, guid: 298c2b21cd383f247b6dbf8143b22c31, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Crank3
+    clip: {fileID: 8300000, guid: 3146e9db926e6314691bb5fdd34120c2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CrankSewer1
+    clip: {fileID: 8300000, guid: 28e3e1bcd4f13264588ea110236b8a53, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Foguete1
+    clip: {fileID: 8300000, guid: afad515ae6ee1c34bba7fbda6bf75465, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: DobraSumindo1
+    clip: {fileID: 8300000, guid: 04fb4223ca32068439e97aee7509180d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "Bot\xE3o1"
+    clip: {fileID: 8300000, guid: 2145836f500c1e147bc247c520246f0d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AbrirMapa1
+    clip: {fileID: 8300000, guid: 73e1f44829821484ab1e53cc2548b627, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FecharMapa1
+    clip: {fileID: 8300000, guid: 341fd26793f348343b5cd1081dfeeaa2, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Porta1
+    clip: {fileID: 8300000, guid: 63f1599f003a17f42b9c4249de485db5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Countdown1
+    clip: {fileID: 8300000, guid: cd2e9b609f83ae848a90de1e3fccd3dd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Typewriter1
+    clip: {fileID: 8300000, guid: e0109606ae42517489e5e7a16c89e0ff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing1
+    clip: {fileID: 8300000, guid: 8a2760c3f58fddb4b884a12553a48991, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing2
+    clip: {fileID: 8300000, guid: df3072f432fe36c469f2557dbe2f301c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing3
+    clip: {fileID: 8300000, guid: ab3ded093c1d0a742a4392839dde4aa3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing4
+    clip: {fileID: 8300000, guid: d2f1829251fee6a47af5e00a8e61e405, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing5
+    clip: {fileID: 8300000, guid: c401409c64ca61f4cbabcd2d6ea686b5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing6
+    clip: {fileID: 8300000, guid: bd2d4c5b6de8870468f2f18966c865b3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing7
+    clip: {fileID: 8300000, guid: 8c9aaa5148e2e2b48a715a76088d36de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing8
+    clip: {fileID: 8300000, guid: 330fd3915aef7ec45907134214964f7d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Writing9
+    clip: {fileID: 8300000, guid: 8b17f55d047a9384fa2cdaac783df96b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Phone1
+    clip: {fileID: 8300000, guid: fc35449d2406ccc42a67ec82f19af728, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Phone2
+    clip: {fileID: 8300000, guid: 54e0ec178002cbd42a218e959b759318, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Phone3
+    clip: {fileID: 8300000, guid: 77b1ff614b42c9c4c85f7e5a01d2f3bf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Phone4
+    clip: {fileID: 8300000, guid: 3c8a498f77b4313458e7f630a4305706, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Phone5
+    clip: {fileID: 8300000, guid: d717a80ba725df3489540712cac769b1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick1.1
+    clip: {fileID: 8300000, guid: e59453a4d4c776a4eae4e6bd06a3c5ac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick1.2
+    clip: {fileID: 8300000, guid: 4c51735f994b24e40ac7200fd588a007, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick1.3
+    clip: {fileID: 8300000, guid: a849b18235646a24c8825bba231cbd21, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick1.4
+    clip: {fileID: 8300000, guid: e4a199fcaa92f6d439cffa23823e30d9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick1.5
+    clip: {fileID: 8300000, guid: c05a2795354a19a4a8d75b1d541d7562, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick1.6
+    clip: {fileID: 8300000, guid: 3e3c6ad429287464795b1019f11ba53b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick1.7
+    clip: {fileID: 8300000, guid: db133fa33c65f5c4d8a85b5e093f900a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick2.1
+    clip: {fileID: 8300000, guid: 9a666d6c71c459e4793c3277069b13fa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick2.2
+    clip: {fileID: 8300000, guid: b7639853ade189c4c8e817fcdc97d7e6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick2.3
+    clip: {fileID: 8300000, guid: 62ba75573c9512746b97f4a5db3adde2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick2.4
+    clip: {fileID: 8300000, guid: 49840dc0e817c564a8a40a119bcfc750, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick3.1
+    clip: {fileID: 8300000, guid: 4604d2f818df145469ecb5e204983fcc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick3.2
+    clip: {fileID: 8300000, guid: 143dfda7765606746bb757d4f1cf0bad, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick3.3
+    clip: {fileID: 8300000, guid: a30ec615ebb9ee0499e93e8de8dfc46c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick3.4
+    clip: {fileID: 8300000, guid: 64ec24873c2da6b408f6791d3e2207df, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick4.1
+    clip: {fileID: 8300000, guid: b2d31560421ac3445ac7ededb4af78ab, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick4.2
+    clip: {fileID: 8300000, guid: 88d32c4d7eb692741a076ed71c9d1efd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick4.3
+    clip: {fileID: 8300000, guid: 14e4917cdb45fa54fbf72247472c27e0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick4.4
+    clip: {fileID: 8300000, guid: 21c992d1e19dad845b0a0040682bd571, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick5.1
+    clip: {fileID: 8300000, guid: 2d1b90b8372f1574b8be77da2e4afa04, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick5.2
+    clip: {fileID: 8300000, guid: eb18782cdfd065a4f9aa56e6da819d2a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick5.3
+    clip: {fileID: 8300000, guid: 06c37e4e79b666a4086dd1981b2ee91a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick6.1
+    clip: {fileID: 8300000, guid: 77956cde7eebb4f4393ab23dd07d51b1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick6.2
+    clip: {fileID: 8300000, guid: 25154de532af2404a971a1f9c1122bb7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick6.3
+    clip: {fileID: 8300000, guid: f6f370a8d37f65642b7a195043470084, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick6.4
+    clip: {fileID: 8300000, guid: 8af0a96d4e08d9f4c91917ee886786a4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick7.1
+    clip: {fileID: 8300000, guid: 98b1fa62ff55f444d951e9faf5eda3e6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick7.2
+    clip: {fileID: 8300000, guid: 6d8025c0912663d4db3ec3490f86bf08, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick7.3
+    clip: {fileID: 8300000, guid: a36b1168e7e5c8c44a6709d7feae7475, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick7.4
+    clip: {fileID: 8300000, guid: 29847170c924f5c4c9ef4292f6eff439, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick8.1
+    clip: {fileID: 8300000, guid: 9edb740e64c01a8469f790bae5482f2a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick8.2
+    clip: {fileID: 8300000, guid: efd66adf124533946afb87713d746e5c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick8.3
+    clip: {fileID: 8300000, guid: 8411c022ea55ff642865ce5686485ece, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick8.4
+    clip: {fileID: 8300000, guid: 2e45ae8478de7c840abef2c21f5e898d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick9.1
+    clip: {fileID: 8300000, guid: ed181edbf39d7af46b32e66b773aa944, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick9.2
+    clip: {fileID: 8300000, guid: 3714c51478261f849960c2574720fddb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick9.3
+    clip: {fileID: 8300000, guid: 1184f6ea8b6b2ed41830c7d22d1fc2b9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick9.4
+    clip: {fileID: 8300000, guid: 943a4309362077648a6e098af6147ca9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.1
+    clip: {fileID: 8300000, guid: 849bf9dcfac54624eb846a58797bec3f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.2
+    clip: {fileID: 8300000, guid: 62d213271b414ee419dc2e7c61fc0ef1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.3
+    clip: {fileID: 8300000, guid: 1b27ed460512b354cb0aac0dcdc89abc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.4
+    clip: {fileID: 8300000, guid: 1294599dd78e6d44cbae02f58dc45177, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.5
+    clip: {fileID: 8300000, guid: 1faa399520275614f85bd203a9babaf4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.6
+    clip: {fileID: 8300000, guid: 48e2ce08faff04d4d93c972711072f36, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.7
+    clip: {fileID: 8300000, guid: 1f48ea01295d60443994e0c0ac4cbb43, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.8
+    clip: {fileID: 8300000, guid: cae4673515ceba249b7a2763f3b73e90, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kubrick10.9
+    clip: {fileID: 8300000, guid: a59ba6ee02d453f4a813590e580b5639, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ator1
+    clip: {fileID: 8300000, guid: e1e29949dd6c4e94eac72966410b4845, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ator1.a
+    clip: {fileID: 8300000, guid: 9dda70ac118401143a788c7fc5a29902, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ator1.b
+    clip: {fileID: 8300000, guid: fff6c460b0394a04592d2c03e9fd07f2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ator1.c
+    clip: {fileID: 8300000, guid: e7d03127dad8cfb4fb172bab0de8c323, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Consciencia1
+    clip: {fileID: 8300000, guid: 1c3ba4ecc4de6b4458b03521259ad47f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Consciencia2
+    clip: {fileID: 8300000, guid: be98a8f9677284543a337fa981c30fac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Consciencia3
+    clip: {fileID: 8300000, guid: be98a8f9677284543a337fa981c30fac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Obrigado
+    clip: {fileID: 8300000, guid: d2423e9e493371845bdbe31650384a60, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: OSegundo
+    clip: {fileID: 8300000, guid: 46b6403a6349e864d80c83f2f2a525ac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Profundo
+    clip: {fileID: 8300000, guid: 07ecf5063412cee4f8f30a1e10f9704d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Luz
+    clip: {fileID: 8300000, guid: 8984b884119db75448c3e09cb873b8bf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Camera
+    clip: {fileID: 8300000, guid: 5236028735938fa49b8ff018763b898b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "A\xE7\xE3o"
+    clip: {fileID: 8300000, guid: c8fbaaf3347a65b4b90b41a8d2359e1e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Porta
+    clip: {fileID: 8300000, guid: 63f1599f003a17f42b9c4249de485db5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
