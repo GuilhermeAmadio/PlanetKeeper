@@ -8,6 +8,7 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField] private CharacterStat healthStat;
 
     [SerializeField] private CharacterInvencibility charInvencibility;
+    [SerializeField] private DamageNumbers damageNumbers;
 
     [SerializeField] private UnityEvent<GameObject> onHit;
     //[SerializeField] private UnityEvent<GameObject> onHeavyHit;
@@ -46,6 +47,7 @@ public class CharacterHealth : MonoBehaviour
             if (damageMitigation != 1)
             {
                 onHit?.Invoke(sender);
+                damageNumbers?.DamageNumber(damageToTake);
             }
 
             if (defense)

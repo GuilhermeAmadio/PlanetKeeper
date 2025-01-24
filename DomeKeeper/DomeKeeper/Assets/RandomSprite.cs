@@ -1,20 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 public class RandomSprite : MonoBehaviour
 {
-    [SerializeField] private Sprite[] sprites;
-
-    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private SpriteLibrary spriteLibrary;
+    [SerializeField] private SpriteLibraryAsset[] spriteAssets;
 
     private void Start()
     {
-        ChooseRandomSprite();
-    }
-
-    public void ChooseRandomSprite()
-    {
-        sr.sprite = sprites[Random.Range(0, sprites.Length)];
+        spriteLibrary.spriteLibraryAsset = spriteAssets[Random.Range(0, spriteAssets.Length)];
     }
 }

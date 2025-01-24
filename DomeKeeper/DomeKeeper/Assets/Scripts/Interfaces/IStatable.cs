@@ -8,4 +8,5 @@ public interface IStatable
     public void ChangeStat(float amount);
     public void IncreaseStat(float amount);
     public void DecreaseStat(float amount);
+    public void SetMaxStat(float amount);
 }

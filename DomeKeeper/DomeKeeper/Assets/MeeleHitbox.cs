@@ -8,11 +8,20 @@ public class MeeleHitbox : MonoBehaviour
     [SerializeField] private FloatStatsSO damage;
 
     [SerializeField] private float range;
+    [SerializeField] private FloatStatsSO rangeUpgrade;
     [SerializeField] private LayerMask enemiesLayer;
 
     [SerializeField] private UnityEvent<GameObject> onHit;
 
     private List<GameObject> enemiesHitted = new List<GameObject>();
+
+    private void Start()
+    {
+        if (rangeUpgrade != null)
+        {
+            range += rangeUpgrade.GetCurrentValue();
+        }
+    }
 
     private void Update()
     {

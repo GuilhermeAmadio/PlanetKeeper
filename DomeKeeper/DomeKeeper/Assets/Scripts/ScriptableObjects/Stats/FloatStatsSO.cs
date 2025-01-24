@@ -93,6 +93,13 @@ public class FloatStatsSO : ScriptableObject
         upgradedValue += amount;
     }
 
+    public void SetMaxValue(float newMaxStat)
+    {
+        maxValue = newMaxStat;
+
+        onMaxValueChanged?.onFuncionCalled.Invoke();
+    }
+
     public void UpdateMaxValue()
     {
         maxValue = baseValue + upgradedValue;

@@ -8,6 +8,6 @@ public class CallDelegateOnStart : MonoBehaviour
 
     private void Start()
     {
-        delegateToCall.onFuncionCalled.Invoke();
+        delegateToCall?.onFuncionCalled.Invoke();
     }
 }

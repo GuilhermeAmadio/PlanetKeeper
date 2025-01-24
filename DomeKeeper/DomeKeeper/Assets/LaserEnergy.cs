@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserEnergy : MonoBehaviour
 {
-    [SerializeField] private float energyValue;
+    [SerializeField] private CharacterStat energyValue, energyRegen;
 
     private bool attacking;
 
@@ -12,11 +12,17 @@ public class LaserEnergy : MonoBehaviour
     {
         if (attacking)
         {
-            energyValue -= Time.deltaTime;
+            if (energyValue.GetCurrentStat() > 0f)
+            {
+                energyValue.DecreaseStat(Time.deltaTime * 2);
+            }
         }
         else 
         {
-            energyValue += Time.deltaTime;
+            if (energyValue.GetCurrentStat() <= energyValue.GetMaxStat())
+            {
+                energyValue.IncreaseStat(energyRegen.GetCurrentStat() * Time.deltaTime);
+            }
         }
     }
 

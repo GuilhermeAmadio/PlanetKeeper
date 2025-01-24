@@ -7,9 +7,11 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
-    [SerializeField] private int maxProgression, levelProgression;
+    [SerializeField] private CharacterStat progressionStat;
 
-    [SerializeField] private Slider levelSlider;
+    [SerializeField] private float maxProgression, levelProgression;
+
+    [SerializeField] private bool progressionBasedOnEnemy;
 
     private void Awake()
     {
@@ -18,13 +20,26 @@ public class LevelManager : MonoBehaviour
 
     public void Progress()
     {
-        levelProgression++;
-
-        levelSlider.value = levelProgression;
-
-        if (levelProgression >= maxProgression)
+        if (progressionBasedOnEnemy)
         {
-            Debug.Log("Level Finalizado");
+            levelProgression++;
+
+            progressionStat.ChangeStat(levelProgression);
+
+            if (levelProgression >= maxProgression)
+            {
+                Debug.Log("Level Finalizado");
+            }
         }
+    }
+
+    public float GetMaxLevelProgression()
+    {
+        return maxProgression;
+    }
+
+    private void OnEnable()
+    {
+        progressionStat.SetMaxStat(maxProgression);
     }
 }

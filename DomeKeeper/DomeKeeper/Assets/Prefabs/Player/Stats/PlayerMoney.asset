@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f24d77b064d54b4eb111b42c5dadb11, type: 3}
   m_Name: PlayerMoney
   m_EditorClassIdentifier: 
-  value: 0
+  value: 2
   onValueChanged: {fileID: 11400000, guid: 24468259d822dc54b8a201c4d7a20838, type: 2}

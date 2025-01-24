@@ -37,26 +37,6 @@ public class FloatSO : ScriptableObject
 
     public void ValueChanged()
     {
-        if (onValueChanged != null)
-        {
-            onValueChanged.onFuncionCalled.Invoke();
-        }
-    }
-
-    private void OnEnable()
-    {
-        if (onValueChanged != null)
-            onValueChanged.onFuncionCalled += DebugValue;
-    }
-
-    private void OnDisable()
-    {
-        if (onValueChanged != null)
-            onValueChanged.onFuncionCalled -= DebugValue;
-    }
-
-    private void DebugValue()
-    {
-        //teste
+        onValueChanged?.onFuncionCalled.Invoke();
     }
 }

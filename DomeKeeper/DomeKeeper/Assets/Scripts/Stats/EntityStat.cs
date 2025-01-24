@@ -9,7 +9,7 @@ public class EntityStat : MonoBehaviour, IStatable
 
     private FloatStatsSO floatStats;
 
-    private void Start()
+    private void Awake()
     {
         floatStats = charStat.GetFloatStat();
 
@@ -49,5 +49,10 @@ public class EntityStat : MonoBehaviour, IStatable
         {
             floatStats.ChangeCurrentValue(0f);
         }
+    }
+
+    public void SetMaxStat(float newMaxStat)
+    {
+        floatStats.SetMaxValue(newMaxStat);
     }
 }

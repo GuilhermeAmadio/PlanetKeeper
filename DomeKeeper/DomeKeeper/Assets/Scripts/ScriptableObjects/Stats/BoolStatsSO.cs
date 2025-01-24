@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Stats", menuName = "Stat/Bool")]
 public class BoolStatsSO : ScriptableObject
 {
-    public StatsEnum statsName;
+    //public StatsEnum statsName;
 
     public bool activated;
 
-    public StatsEnum GetStatsName() { return statsName; }
+    //public StatsEnum GetStatsName() { return statsName; }
 
     public bool isActivated()
     {

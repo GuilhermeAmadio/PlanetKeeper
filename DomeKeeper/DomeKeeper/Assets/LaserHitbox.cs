@@ -50,6 +50,11 @@ public class laserHitbox : MonoBehaviour
         return 0;
     }
 
+    public void SetRange(float newRange)
+    {
+        range = newRange;
+    }
+
     private void OnEnable()
     {
         StartCoroutine(DealDamage());

@@ -33,6 +33,11 @@ public class ObjectStat : MonoBehaviour, IStatable
         currentStat -= amount;
     }
 
+    public void SetMaxStat(float newMaxStat)
+    {
+        
+    }
+
     private void OnEnable()
     {
         ResetStat();

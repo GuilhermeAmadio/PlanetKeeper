@@ -30,6 +30,12 @@ public class CharacterStat : MonoBehaviour
         stat.DecreaseStat(amount);
     }
 
+    public void SetMaxStat(float amount)
+    {
+        stat.SetMaxStat(amount);
+    }
+
+
     public float GetBaseStat()
     {
         return floatStat.GetBaseValue();

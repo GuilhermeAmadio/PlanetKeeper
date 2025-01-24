@@ -18,6 +18,6 @@ MonoBehaviour:
   upgradedValue: 0
   maxValue: 10
   hasInitialValue: 0
-  hasMaxValue: 0
+  hasMaxValue: 1
   onCurrentValueChanged: {fileID: 11400000, guid: dfa8ffdd88ffa7147a282fbcbd90db2d, type: 2}
   onMaxValueChanged: {fileID: 0}
