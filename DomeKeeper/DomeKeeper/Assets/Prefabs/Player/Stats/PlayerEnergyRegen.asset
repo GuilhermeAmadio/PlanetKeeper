@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PlayerEnergyRegen
   m_EditorClassIdentifier: 
   initialValue: 0
-  baseValue: 10
-  currentValue: 10
+  baseValue: 1
+  currentValue: 1
   upgradedValue: 0
-  maxValue: 10
+  maxValue: 1
   hasInitialValue: 0
   hasMaxValue: 0
   onCurrentValueChanged: {fileID: 0}

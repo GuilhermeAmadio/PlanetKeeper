@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Experience
   m_EditorClassIdentifier: 
   experienceMarks:
-  - 0
+  - 50

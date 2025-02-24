@@ -15,7 +15,12 @@ public class Enemy : MonoBehaviour
         if (playerTransform.GetTransform() != null)
         {
             targetOnTime.CalculateSpeed(transform, playerTransform.GetTransform());
-            goToTarget.ChaseTransform(playerTransform.GetTransform());
+            ChaseTarget();
         }
+    }
+
+    public void ChaseTarget()
+    {
+        goToTarget.ChaseTransform(playerTransform.GetTransform());
     }
 }

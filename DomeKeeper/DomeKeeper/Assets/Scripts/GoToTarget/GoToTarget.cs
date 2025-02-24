@@ -51,4 +51,9 @@ public class GoToTarget : MonoBehaviour
     {
         speed = newSpeed;
     }
+
+    public void Chase(bool chasing)
+    {
+        chase = chasing;
+    }
 }

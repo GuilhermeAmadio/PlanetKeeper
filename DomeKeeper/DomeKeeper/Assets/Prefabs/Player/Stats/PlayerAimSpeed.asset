@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialValue: 0
   baseValue: 10
-  currentValue: 1
+  currentValue: 10
   upgradedValue: 0
-  maxValue: 1
+  maxValue: 10
   hasInitialValue: 0
   hasMaxValue: 0
   onCurrentValueChanged: {fileID: 0}

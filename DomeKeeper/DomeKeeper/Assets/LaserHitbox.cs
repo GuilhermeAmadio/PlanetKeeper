@@ -15,9 +15,10 @@ public class laserHitbox : MonoBehaviour
     [SerializeField] private Chance criticalChance;
     [SerializeField] private CharacterStat criticalDamage;
 
-    [SerializeField] private UnityEvent<GameObject> onHit;
+    [SerializeField] private ApplyLightning applyLightning;
+    [SerializeField] private ApplySplash applySplash;
 
-    private List<GameObject> enemiesHitted = new List<GameObject>();
+    [SerializeField] private UnityEvent<GameObject> onHit;
 
     private IEnumerator DealDamage()
     {
@@ -29,10 +30,14 @@ public class laserHitbox : MonoBehaviour
             {
                 enemy.GetComponentInChildren<CharacterHealth>()?.TakeDamage(damage.GetCurrentStat() + ApplyCritical(), gameObject);
 
-                if (onHit != null)
+                if (applyLightning.CheckLightning())
                 {
-                    onHit.Invoke(enemy.gameObject);
+                    enemy.GetComponentInChildren<LightningChain>().Chain(applyLightning.GetLightningSpread());
                 }
+
+                applySplash.Splash();
+
+                onHit?.Invoke(enemy.gameObject);
             }
 
             yield return new WaitForSeconds(damageCD.GetCurrentStat());

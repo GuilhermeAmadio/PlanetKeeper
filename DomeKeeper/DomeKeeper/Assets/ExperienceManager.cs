@@ -18,7 +18,7 @@ public class ExperienceManager : MonoBehaviour
     {
         if (money.GetValue() >= experience.GetExperience(level))
         {
-            Debug.Log("teste");
+            //Debug.Log("teste");
         }
     }
 }

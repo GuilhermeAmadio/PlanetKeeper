@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerCritChance
   m_EditorClassIdentifier: 
   initialValue: 0
-  baseValue: 100
+  baseValue: 0
   currentValue: 0
   upgradedValue: 0
   maxValue: 0

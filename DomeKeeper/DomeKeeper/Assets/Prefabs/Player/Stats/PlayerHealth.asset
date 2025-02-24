@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
   initialValue: 5
-  baseValue: 10
-  currentValue: 10
+  baseValue: 5
+  currentValue: 0
   upgradedValue: 0
-  maxValue: 10
+  maxValue: 5
   hasInitialValue: 0
   hasMaxValue: 1
   onCurrentValueChanged: {fileID: 11400000, guid: dfa8ffdd88ffa7147a282fbcbd90db2d, type: 2}

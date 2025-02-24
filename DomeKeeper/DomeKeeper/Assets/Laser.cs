@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Laser : MonoBehaviour
@@ -22,6 +23,8 @@ public class Laser : MonoBehaviour
     [SerializeField] private LayerMask enemiesLayer;
 
     [SerializeField] private SetAnimation sprite;
+
+    [SerializeField] private UnityEvent onLaserEnable, onLaserDisable;
 
     private bool shooting, canShoot = true;
     private float distanceRayRef;
@@ -97,6 +100,8 @@ public class Laser : MonoBehaviour
             distanceRayRef = 0f;
 
             sprite.SetAnimationBool("Attack", true);
+
+            onLaserEnable?.Invoke();
         }
     }
 
@@ -112,6 +117,8 @@ public class Laser : MonoBehaviour
         applyDamage.SetActive(false);
 
         sprite.SetAnimationBool("Attack", false);
+
+        onLaserDisable?.Invoke();
     }
 
     private IEnumerator RefreshLaser()

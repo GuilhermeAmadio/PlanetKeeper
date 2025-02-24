@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialValue: 0
   baseValue: 10
-  currentValue: 75.11654
+  currentValue: 3.894198
   upgradedValue: 0
-  maxValue: 100
+  maxValue: 10
   hasInitialValue: 0
   hasMaxValue: 1
   onCurrentValueChanged: {fileID: 11400000, guid: 058831f582bd5a740aefdef7384f1b28, type: 2}

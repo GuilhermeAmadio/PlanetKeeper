@@ -14,4 +14,16 @@ public class InstantiateObj : MonoBehaviour
 
         return newObj;
     }
+
+    public void InstantiateObjectInPos(Transform pos)
+    {
+        Vector3 randomPos = new Vector3(Random.Range(minRandomPos.x, maxRandomPos.x), Random.Range(minRandomPos.y, maxRandomPos.y), 1f);
+        Instantiate(obj, pos.position + randomPos, Quaternion.identity, transform);
+    }
+
+    public void JustInstantiate()
+    {
+        Vector3 randomPos = new Vector3(Random.Range(minRandomPos.x, maxRandomPos.x), Random.Range(minRandomPos.y, maxRandomPos.y), 1f);
+        Instantiate(obj, transform.position + randomPos, Quaternion.identity);
+    }
 }

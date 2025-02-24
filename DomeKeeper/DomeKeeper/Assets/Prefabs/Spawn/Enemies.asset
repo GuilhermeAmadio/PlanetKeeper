@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesToSpawn:
   - cost: 0
-    prefab: {fileID: 2787140179317489502, guid: 4145fc52634ce6c48bb22b04934d9700, type: 3}
+    prefab: {fileID: 712518292993731940, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
+  - cost: 0
+    prefab: {fileID: 7515018885697913955, guid: eec9657883633d24f987f43428e560e8, type: 3}
+  miniBoss: {fileID: 6918933209194795438, guid: e394059607ab8744bab8d8c8e9ad1a5f, type: 3}

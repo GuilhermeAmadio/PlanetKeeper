@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Point : MonoBehaviour
 {
     [SerializeField] private float pointValue;
+    [SerializeField] private MoneyType type;
 
     [SerializeField] private FloatStatsSO pointIncrease;
+    [SerializeField] private Chance bonusChance;
 
     [SerializeField] private TransformSO playerTransform;
 
     [SerializeField] private GoToTarget goToTarget;
     [SerializeField] private GoToTargetOnTime targetOnTime;
+
+    [SerializeField] private UnityEvent onPickUp;
 
     private bool take;
 
@@ -30,7 +35,16 @@ public class Point : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            MoneyManager.instance.IncreaseMoney(pointValue + pointIncrease.GetCurrentValue());
+            float bonusPoint = 0;
+
+            if (bonusChance.CheckChance())
+            {
+                bonusPoint = pointIncrease.GetCurrentValue();
+            }
+
+            MoneyManager.instance.IncreaseMoney(type, pointValue + bonusPoint);
+
+            onPickUp?.Invoke();
 
             Destroy(gameObject);
         }

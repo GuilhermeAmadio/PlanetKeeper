@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596df7120e27d9140a0d8db65e8eaf64, type: 3}
   m_Name: OrbitalActivated
   m_EditorClassIdentifier: 
-  activated: 1
+  activated: 0
