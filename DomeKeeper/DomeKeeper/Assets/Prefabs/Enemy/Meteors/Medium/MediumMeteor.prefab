@@ -177,6 +177,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4963067714387807839, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
+      propertyPath: stat
+      value: 
+      objectReference: {fileID: 11400000, guid: e3f388b3445fb0b45b8bd3e032188300, type: 2}
+    - target: {fileID: 4963067714387807839, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
       propertyPath: floatStat
       value: 
       objectReference: {fileID: 11400000, guid: fb7402f2c4653304288508bee70fa9b3, type: 2}
@@ -195,7 +199,11 @@ PrefabInstance:
     - target: {fileID: 6988239438469844261, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
       propertyPath: damage
       value: 
-      objectReference: {fileID: 11400000, guid: fb7402f2c4653304288508bee70fa9b3, type: 2}
+      objectReference: {fileID: 11400000, guid: e3f388b3445fb0b45b8bd3e032188300, type: 2}
+    - target: {fileID: 7432264537447446566, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
+      propertyPath: stat
+      value: 
+      objectReference: {fileID: 11400000, guid: eaf8ebd6baadfbc479f65ccfbeb02f60, type: 2}
     - target: {fileID: 7432264537447446566, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
       propertyPath: floatStat
       value: 

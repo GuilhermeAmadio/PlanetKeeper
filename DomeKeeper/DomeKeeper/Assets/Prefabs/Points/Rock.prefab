@@ -8,9 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1932990833954130659, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
+      propertyPath: chance
+      value: 
+      objectReference: {fileID: 11400000, guid: b029f0aa5bfbf3044b74517942f83e77, type: 2}
+    - target: {fileID: 857938482046558508, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
+      propertyPath: pointIncrease
+      value: 
+      objectReference: {fileID: 11400000, guid: eac6e97f33cac1f478be5d24b26bcda0, type: 2}
     - target: {fileID: 2006232109666068003, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: m_Name
-      value: Rock Variant
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 6817788361723496362, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: m_LocalPosition.x

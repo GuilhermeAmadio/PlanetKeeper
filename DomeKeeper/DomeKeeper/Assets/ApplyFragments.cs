@@ -33,14 +33,14 @@ public class ApplyFragments : MonoBehaviour
 
     public float GetFragmentsAmount()
     {
-        return fragmentsAmount.GetCurrentStat();
+        return fragmentsAmount.GetValue();
     }
 
     private IEnumerator FragmentsCD()
     {
         canFragments = false;
 
-        yield return new WaitForSeconds(fragmentsCDStat.GetCurrentStat());
+        yield return new WaitForSeconds(fragmentsCDStat.GetValue());
 
         canFragments = true;
     }

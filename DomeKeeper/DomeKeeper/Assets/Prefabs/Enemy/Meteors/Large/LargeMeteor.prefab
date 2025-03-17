@@ -157,6 +157,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4963067714387807839, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
+      propertyPath: stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 811f43ee59d6c7a4da2ca58b56b72739, type: 2}
+    - target: {fileID: 4963067714387807839, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
       propertyPath: floatStat
       value: 
       objectReference: {fileID: 11400000, guid: dfce6d2fe62af0b4fbf55dd1ead9c864, type: 2}
@@ -167,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 6988239438469844261, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
       propertyPath: damage
       value: 
-      objectReference: {fileID: 11400000, guid: dfce6d2fe62af0b4fbf55dd1ead9c864, type: 2}
+      objectReference: {fileID: 11400000, guid: 811f43ee59d6c7a4da2ca58b56b72739, type: 2}
     - target: {fileID: 6988239438469844261, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -196,6 +200,10 @@ PrefabInstance:
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7432264537447446566, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
+      propertyPath: stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 35f87f611fe4ef640958a0732b3c2619, type: 2}
     - target: {fileID: 7432264537447446566, guid: cf7f1c66e04f51a41b65d99494dddb18, type: 3}
       propertyPath: floatStat
       value: 

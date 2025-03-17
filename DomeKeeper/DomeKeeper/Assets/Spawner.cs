@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private int waveCost, waveCicloQuant, enemiesToSpawnBase;
+    [SerializeField] private int waveCost, waveCicloQuant;
     [SerializeField] private CharacterStat enemiesToSpawnQuant;
     [SerializeField] private SpawnEnemiesSO enemiesToSpawn;
     private float spawnRate;
@@ -49,9 +49,9 @@ public class Spawner : MonoBehaviour
     {
         ciclo++;
 
-        float cicloTimer = spawnRate / enemiesToSpawnQuant.GetCurrentStat();
+        float cicloTimer = spawnRate / enemiesToSpawnQuant.GetValue();
 
-        for(int i = 0; i < enemiesToSpawnQuant.GetCurrentStat(); i++)
+        for(int i = 0; i < enemiesToSpawnQuant.GetValue(); i++)
         {
             SpawnEnemy();
 
@@ -103,7 +103,7 @@ public class Spawner : MonoBehaviour
     {
         enemiesAlive--;
 
-        if (enemiesAlive <= 0 && spawning)
+        if (enemiesAlive <= 0 && !spawning)
         {
             onWaveEnd?.onFuncionCalled.Invoke();
         }

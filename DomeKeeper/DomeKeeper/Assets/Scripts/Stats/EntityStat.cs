@@ -7,52 +7,20 @@ public class EntityStat : MonoBehaviour, IStatable
 {
     public CharacterStat charStat;
 
-    private FloatStatsSO floatStats;
+    private StatSO stat;
 
     private void Awake()
     {
-        floatStats = charStat.GetFloatStat();
-
-        ResetStat();
+        stat = charStat.GetStat();
     }
 
-    private void ResetStat()
+    public float GetCurrentValue()
     {
-        floatStats.CurrentValueEqualToInitial();
+        return stat.GetCurrentValue();
     }
 
-    public float GetCurrentStat()
+    public void ChangeCurrentValue(float amount)
     {
-        return floatStats.GetCurrentValue();
-    }
-
-    public void ChangeStat(float amount)
-    {
-        floatStats.ChangeCurrentValue(amount);
-    }
-
-    public void IncreaseStat(float amount)
-    {
-        floatStats.IncreaseCurrentValue(amount);
-
-        //if (GetCurrentStat() > charStat.GetMaxStat())
-        //{
-        //    floatStats.CurrentValueEqualToMax();
-        //}
-    }
-
-    public void DecreaseStat(float amount)
-    {
-        floatStats.DecreaseCurrentValue(amount);
-
-        if (GetCurrentStat() < 0f)
-        {
-            floatStats.ChangeCurrentValue(0f);
-        }
-    }
-
-    public void SetMaxStat(float newMaxStat)
-    {
-        floatStats.SetMaxValue(newMaxStat);
+        stat.ChangeCurrentValue(amount);
     }
 }

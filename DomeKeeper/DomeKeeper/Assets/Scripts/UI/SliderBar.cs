@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SliderBar : MonoBehaviour
 {
-    public FloatStatsSO statsValue;
+    public StatSO statsValue;
 
     public Image bar;
 
@@ -14,7 +14,7 @@ public class SliderBar : MonoBehaviour
 
     private void Start()
     {
-        bar.fillAmount = statsValue.GetInitialValue() / statsValue.GetMaxValue();
+        UpdateHealth();
     }
 
     public void UpdateHealth()

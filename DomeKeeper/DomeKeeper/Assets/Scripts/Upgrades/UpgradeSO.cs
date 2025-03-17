@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Upgrade", menuName = "Upgrade/New Upgrade")]
@@ -26,5 +27,10 @@ public class UpgradeSO : ScriptableObject
     public string GetUpgradeName()
     {
         return upgradeName;
+    }
+
+    public MoneyType GetMoneyType(int index)
+    {
+        return upgradesInfo[index].type;
     }
 }

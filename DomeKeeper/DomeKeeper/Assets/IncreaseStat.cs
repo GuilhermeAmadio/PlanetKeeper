@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class IncreaseStat : MonoBehaviour
 {
-    [SerializeField] private FloatStatsSO stat;
+    [SerializeField] private CharacterStat stat;
 
     public void Increase(float amount)
     {
-        stat.IncreaseUpgradedValue(amount);
+        stat.ChangeStat(amount);
     }
 }

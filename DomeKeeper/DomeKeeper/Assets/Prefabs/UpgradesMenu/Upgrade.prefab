@@ -1,5 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &633321058833894526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3229946535587395551}
+  - component: {fileID: 2213136262051177962}
+  - component: {fileID: 1546775662582598252}
+  m_Layer: 0
+  m_Name: Stat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3229946535587395551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633321058833894526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3449632828760433850}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2213136262051177962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633321058833894526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f3e6c14f78a184f9f8b3896f10fe95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 0}
+--- !u!114 &1546775662582598252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633321058833894526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7297d5336f7502e49a687a0fa948d456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charStat: {fileID: 2213136262051177962}
 --- !u!1 &1634348190775435407
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +204,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3229946535587395551}
   m_Father: {fileID: 6472745878057925695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5372267666003543684
@@ -160,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8109af59ba63164fa4c7991a541cff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stat: {fileID: 0}
+  stat: {fileID: 2213136262051177962}
 --- !u!1 &5273617555786452773
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +443,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfo: {fileID: 0}
-  money: {fileID: 11400000, guid: 2fe1664b3c933e54fb88425946f5b490, type: 2}
+  rock: {fileID: 11400000, guid: 5ce2d34cfa643df47adc6b24eb84b7cd, type: 2}
+  circuit: {fileID: 11400000, guid: 5cca070ee1974144294c0f68c8814000, type: 2}
+  matter: {fileID: 11400000, guid: 3c35233dec5596746aa72b7e6177e4d3, type: 2}
   upgradeNametext: {fileID: 6108391699869972249}
   upgradeCostText: {fileID: 717461746556495584}
   statToUpgrade: {fileID: 5372267666003543684}

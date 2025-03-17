@@ -7,7 +7,7 @@ public class Upgrade : MonoBehaviour, IClickable
 {
     [SerializeField] private UpgradeSO upgradeInfo;
 
-    [SerializeField] private FloatSO money;
+    [SerializeField] private StatSO rock, circuit, matter;
 
     [SerializeField] private TMPro.TextMeshPro upgradeNametext, upgradeCostText;
 
@@ -26,11 +26,26 @@ public class Upgrade : MonoBehaviour, IClickable
 
     public void Buy()
     {
+        StatSO money = null;
+
+        if (upgradeInfo.GetMoneyType(index) == MoneyType.ROCK)
+        {
+            money = rock;
+        }
+        else if (upgradeInfo.GetMoneyType(index) == MoneyType.CIRCUIT)
+        {
+            money = circuit;
+        }
+        else
+        {
+            money = matter;
+        }
+
         if (money.GetValue() >= upgradeCost && canBuy)
         {
             statToUpgrade.Increase(upgradeInfo.GetUpgradeValue(index));
 
-            money.DecreaseValue(upgradeCost);
+            money.ChangeValue(-upgradeCost);
 
             index++;
             CheckConnections();

@@ -8,7 +8,7 @@ public class Point : MonoBehaviour
     [SerializeField] private float pointValue;
     [SerializeField] private MoneyType type;
 
-    [SerializeField] private FloatStatsSO pointIncrease;
+    [SerializeField] private StatSO pointIncrease;
     [SerializeField] private Chance bonusChance;
 
     [SerializeField] private TransformSO playerTransform;
@@ -39,7 +39,7 @@ public class Point : MonoBehaviour
 
             if (bonusChance.CheckChance())
             {
-                bonusPoint = pointIncrease.GetCurrentValue();
+                bonusPoint = pointIncrease.GetValue();
             }
 
             MoneyManager.instance.IncreaseMoney(type, pointValue + bonusPoint);

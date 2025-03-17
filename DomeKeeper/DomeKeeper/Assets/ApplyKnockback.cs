@@ -11,7 +11,7 @@ public class ApplyKnockback : MonoBehaviour
         Knockback knockbackObj = obj.GetComponentInChildren<Knockback>();
         if (knockbackObj != null)
         {
-            knockbackObj.PlayKnockbackWithForce(gameObject, knockbackForce.GetCurrentStat());
+            knockbackObj.PlayKnockbackWithForce(gameObject, knockbackForce.GetValue());
         }
     }
 }

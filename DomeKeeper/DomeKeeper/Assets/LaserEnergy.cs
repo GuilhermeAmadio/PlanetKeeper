@@ -12,16 +12,16 @@ public class LaserEnergy : MonoBehaviour
     {
         if (attacking)
         {
-            if (energyValue.GetCurrentStat() > 0f)
+            if (energyValue.GetCurrentValue() > 0f)
             {
-                energyValue.DecreaseStat(Time.deltaTime * 2);
+                energyValue.ChangeCurrentValue(-Time.deltaTime * 2);
             }
         }
         else 
         {
-            if (energyValue.GetCurrentStat() <= energyValue.GetMaxStat())
+            if (energyValue.GetCurrentValue() <= energyValue.GetMaxValue())
             {
-                energyValue.IncreaseStat(energyRegen.GetCurrentStat() * Time.deltaTime);
+                energyValue.ChangeCurrentValue(energyRegen.GetValue() * Time.deltaTime);
             }
         }
     }

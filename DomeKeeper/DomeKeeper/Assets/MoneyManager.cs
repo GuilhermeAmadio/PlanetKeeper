@@ -8,7 +8,7 @@ public class MoneyManager : MonoBehaviour
 {
     public static MoneyManager instance;
 
-    [SerializeField] private FloatSO rockStat, circuitStat, matterStat;
+    [SerializeField] private CharacterStat rockStat, circuitStat, matterStat;
 
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private UpdateText diffRock, diffCircuit, diffMatter;
@@ -31,15 +31,15 @@ public class MoneyManager : MonoBehaviour
     {
         if (moneyType == MoneyType.ROCK)
         {
-            rockStat.IncreaseValue(amount);
+            rockStat.ChangeStat(amount);
         }
         else if (moneyType == MoneyType.CIRCUIT)
         {
-            circuitStat.IncreaseValue(amount);
+            circuitStat.ChangeStat(amount);
         }
         else if (moneyType == MoneyType.MATTER)
         {
-            matterStat.IncreaseValue(amount);
+            matterStat.ChangeStat(amount);
         }
     }
 

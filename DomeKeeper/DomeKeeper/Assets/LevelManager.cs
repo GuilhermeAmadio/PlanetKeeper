@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
         {
             levelProgression++;
 
-            progressionStat.ChangeStat(levelProgression);
+            progressionStat.ChangeCurrentValue(levelProgression);
 
             if (levelProgression >= maxProgression)
             {
@@ -40,6 +40,6 @@ public class LevelManager : MonoBehaviour
 
     private void OnEnable()
     {
-        progressionStat.SetMaxStat(maxProgression);
+        //progressionStat.ChangeStat(maxProgression);
     }
 }

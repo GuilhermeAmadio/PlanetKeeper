@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
 
     [SerializeField] private laserHitbox laserHitbox;
 
-    [SerializeField] private GameObject applyDamage, startVFX, endVFX;
+    [SerializeField] private GameObject startVFX, endVFX;
 
     [SerializeField] private LayerMask enemiesLayer;
 
@@ -26,21 +26,21 @@ public class Laser : MonoBehaviour
 
     [SerializeField] private UnityEvent onLaserEnable, onLaserDisable;
 
-    private bool shooting, canShoot = true;
+    private bool shooting, canShoot = true, canClick = true;
     private float distanceRayRef;
 
     private void Start()
     {
         DisableLaser();
-        lr.startWidth = laserSize.GetCurrentStat();
-        laserHitbox.SetRange(laserSize.GetCurrentStat());
+        lr.startWidth = laserSize.GetValue();
+        laserHitbox.SetRange(laserSize.GetValue());
     }
 
     private void Update()
     {
         if (shooting && canShoot)
         {
-            if (energyStat.GetCurrentStat() > 0f)
+            if (energyStat.GetCurrentValue() > 0f)
             {
                 if (distanceRayRef < defDistanceRay)
                 {
@@ -64,22 +64,16 @@ public class Laser : MonoBehaviour
 
             Draw2DRay(laserSpawnPoint.position, hit.point);
 
-            if (!applyDamage.activeSelf)
-            {
-                applyDamage.SetActive(true);
-            }
+            laserHitbox.transform.position = hit.point;
+            laserHitbox.SetCanDealDamage(true);
 
-            applyDamage.transform.position = hit.point;
             distanceRayRef = Vector2.Distance(transform.position, hit.point) + 10f;
         }
         else
         {
             Draw2DRay(laserSpawnPoint.position, laserSpawnPoint.up * distanceRayRef);
 
-            if (applyDamage.activeSelf)
-            {
-                applyDamage.SetActive(false);
-            }
+            laserHitbox.SetCanDealDamage(false);
         }
 
         endVFX.transform.position = lr.GetPosition(1);
@@ -87,11 +81,13 @@ public class Laser : MonoBehaviour
 
     public void EnableLaser()
     {
-        if (canShoot)
+        if (canShoot && canClick)
         {
             lr.enabled = true;
-
+            
+            canClick = false;
             shooting = true;
+
             energy.Attacking(true);
 
             startVFX.SetActive(true);
@@ -114,11 +110,13 @@ public class Laser : MonoBehaviour
 
         startVFX.SetActive(false);
         endVFX.SetActive(false);
-        applyDamage.SetActive(false);
+        laserHitbox.SetCanDealDamage(false);
 
         sprite.SetAnimationBool("Attack", false);
 
         onLaserDisable?.Invoke();
+
+        StartCoroutine(WaitClick());
     }
 
     private IEnumerator RefreshLaser()
@@ -126,9 +124,16 @@ public class Laser : MonoBehaviour
         DisableLaser();
         canShoot = false;
 
-        yield return new WaitForSeconds(energyRecovery.GetCurrentStat());
+        yield return new WaitForSeconds(energyRecovery.GetValue());
 
         canShoot = true;
+    }
+
+    private IEnumerator WaitClick()
+    {
+        yield return new WaitForSeconds(0.7f);
+
+        canClick = true;
     }
 
     private void Draw2DRay(Vector2 startPos, Vector2 endPos)

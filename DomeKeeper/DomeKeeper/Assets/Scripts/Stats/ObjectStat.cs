@@ -10,32 +10,27 @@ public class ObjectStat : MonoBehaviour, IStatable
 
     private void ResetStat()
     {
-        currentStat = charStat.GetBaseStat();
+        currentStat = charStat.GetValue();
     }
 
-    public void ChangeStat(float amount)
-    {
-        currentStat = amount;
-    }
-
-    public float GetCurrentStat()
+    public float GetCurrentValue()
     {
         return currentStat;
     }
 
-    public void IncreaseStat(float amount)
+    public void ChangeCurrentValue(float amount)
     {
         currentStat += amount;
-    }
 
-    public void DecreaseStat(float amount)
-    {
-        currentStat -= amount;
-    }
+        if (currentStat > charStat.GetMaxValue())
+        {
+            currentStat = charStat.GetMaxValue();
+        }
 
-    public void SetMaxStat(float newMaxStat)
-    {
-        
+        if (currentStat < 0)
+        {
+            currentStat = 0;
+        }
     }
 
     private void OnEnable()

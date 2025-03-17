@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3f8b57e06d3a042b9c06e72714fb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: {fileID: 11400000, guid: afad3b964a65f554cbe84c44e3967f2f, type: 2}
+  damage: {fileID: 11400000, guid: 19b4644e7fe80654ea2ddab0a2b43831, type: 2}
   range: 3
-  rangeUpgrade: {fileID: 11400000, guid: 7ac568d76d560b14f8db1145647339d1, type: 2}
+  rangeUpgrade: {fileID: 11400000, guid: 157379dfad3b180418d8969f5d4f7a81, type: 2}
   enemiesLayer:
     serializedVersion: 2
     m_Bits: 128

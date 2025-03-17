@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 public class MeeleHitbox : MonoBehaviour
 {
-    [SerializeField] private FloatStatsSO damage;
+    [SerializeField] private StatSO damage;
 
     [SerializeField] private float range;
-    [SerializeField] private FloatStatsSO rangeUpgrade;
+    [SerializeField] private StatSO rangeUpgrade;
     [SerializeField] private LayerMask enemiesLayer;
 
     [SerializeField] private UnityEvent<GameObject> onHit;
@@ -19,7 +19,7 @@ public class MeeleHitbox : MonoBehaviour
     {
         if (rangeUpgrade != null)
         {
-            range += rangeUpgrade.GetCurrentValue();
+            range += rangeUpgrade.GetValue();
         }
     }
 
@@ -31,7 +31,7 @@ public class MeeleHitbox : MonoBehaviour
         {
             if (!enemiesHitted.Contains(enemy.gameObject))
             {
-                enemy.GetComponentInChildren<CharacterHealth>()?.TakeDamage(damage.GetCurrentValue(), gameObject);
+                enemy.GetComponentInChildren<CharacterHealth>()?.TakeDamage(damage.GetValue(), gameObject);
 
                 enemiesHitted.Add(enemy.gameObject);
 

@@ -9,15 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a270685f9801ef4fa75edb4595f0370, type: 3}
+  m_Script: {fileID: 11500000, guid: c8f4e95fc44d57245883710497407f85, type: 3}
   m_Name: TurretCD
   m_EditorClassIdentifier: 
-  initialValue: 0
-  baseValue: 1
-  currentValue: 0
-  upgradedValue: 0
+  value: 1
   maxValue: 0
-  hasInitialValue: 0
   hasMaxValue: 0
+  maxValueEqualToValue: 0
   onCurrentValueChanged: {fileID: 0}
-  onMaxValueChanged: {fileID: 0}

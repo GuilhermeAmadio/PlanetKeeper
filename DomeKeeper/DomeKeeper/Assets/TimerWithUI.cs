@@ -11,11 +11,16 @@ public class TimerWithUI : MonoBehaviour
 
     private bool finished;
 
+    private void Awake()
+    {
+        timerStat.SetMaxStat(maxTimer);
+    }
+
     private void Update()
     {
-        if (timerStat.GetCurrentStat() < maxTimer)
+        if (timerStat.GetCurrentValue() < maxTimer)
         {
-            timerStat.IncreaseStat(Time.deltaTime);
+            timerStat.ChangeCurrentValue(Time.deltaTime);
         }
         else
         {

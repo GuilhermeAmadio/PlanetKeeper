@@ -49,13 +49,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1760488278762030590, guid: 3c9772b052950ec4a905a5cf54d78215, type: 3}
+      propertyPath: stat
+      value: 
+      objectReference: {fileID: 11400000, guid: 863820719c1da0f4088a87ad825063a1, type: 2}
+    - target: {fileID: 1760488278762030590, guid: 3c9772b052950ec4a905a5cf54d78215, type: 3}
       propertyPath: floatStat
       value: 
       objectReference: {fileID: 11400000, guid: 57197eea5fd32bf43926aef7cb38feeb, type: 2}
     - target: {fileID: 2283607883776979197, guid: 3c9772b052950ec4a905a5cf54d78215, type: 3}
       propertyPath: damage
       value: 
-      objectReference: {fileID: 11400000, guid: 58005b5ffc933814b9faddae0fc46441, type: 2}
+      objectReference: {fileID: 11400000, guid: fa858ee13bf053943af0c3c33ccc799a, type: 2}
     - target: {fileID: 2283607883776979197, guid: 3c9772b052950ec4a905a5cf54d78215, type: 3}
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -92,6 +96,10 @@ PrefabInstance:
       propertyPath: spriteAssets.Array.data[0]
       value: 
       objectReference: {fileID: 7108339969198208228, guid: d95ac47d4ec4da8488330163ec29563d, type: 3}
+    - target: {fileID: 4299367753763763079, guid: 3c9772b052950ec4a905a5cf54d78215, type: 3}
+      propertyPath: stat
+      value: 
+      objectReference: {fileID: 11400000, guid: fa858ee13bf053943af0c3c33ccc799a, type: 2}
     - target: {fileID: 4299367753763763079, guid: 3c9772b052950ec4a905a5cf54d78215, type: 3}
       propertyPath: floatStat
       value: 

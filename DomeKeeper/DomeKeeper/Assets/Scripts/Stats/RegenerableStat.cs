@@ -6,7 +6,7 @@ public class RegenerableStat : MonoBehaviour
 {
     [SerializeField] private CharacterStat charStat;
 
-    [SerializeField] private FloatStatsSO regenAmount;
+    [SerializeField] private StatSO regenAmount;
 
     [SerializeField] private bool degen;
 
@@ -23,17 +23,17 @@ public class RegenerableStat : MonoBehaviour
 
     private void RegenStat()
     {
-        if (charStat.GetCurrentStat() < charStat.GetMaxStat())
+        if (charStat.GetCurrentValue() < charStat.GetMaxValue())
         {
-            charStat.IncreaseStat(regenAmount.GetCurrentValue());
+            charStat.ChangeCurrentValue(regenAmount.GetValue());
         }
     }
 
     private void DegenStat()
     {
-        if (charStat.GetCurrentStat() > 0f)
+        if (charStat.GetCurrentValue() > 0f)
         {
-            charStat.DecreaseStat(regenAmount.GetCurrentValue());
+            charStat.ChangeCurrentValue(-regenAmount.GetValue());
         }
     }
 }

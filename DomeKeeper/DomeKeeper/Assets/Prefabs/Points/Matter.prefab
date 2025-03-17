@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -1932990833954130659, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: chance
       value: 
-      objectReference: {fileID: 11400000, guid: 465de60ff729a7e48bc147278e8bfe97, type: 2}
+      objectReference: {fileID: 11400000, guid: b84c4f14d39776649b5b6ed4d415de2f, type: 2}
     - target: {fileID: 857938482046558508, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: type
       value: 2
@@ -19,7 +19,7 @@ PrefabInstance:
     - target: {fileID: 857938482046558508, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: pointIncrease
       value: 
-      objectReference: {fileID: 11400000, guid: 9ea2ad63228a3d34f80701c2c2f8179e, type: 2}
+      objectReference: {fileID: 11400000, guid: 213cd9146c6b16e48b137ee79f41c56c, type: 2}
     - target: {fileID: 2006232109666068003, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: m_Name
       value: Matter

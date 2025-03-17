@@ -31,18 +31,17 @@ public class CharacterHealth : MonoBehaviour
         if (!invencible)
         {
             if (armor != null)
-                amount -= armor.GetCurrentStat();
+                amount -= armor.GetValue();
 
             if (amount < 0)
             {
                 return;
             }
 
-            Debug.Log("Take Damage: " + amount);
-
             float damageToTake = amount - (amount * damageMitigation);
+            Debug.Log("Take Damage: " + damageToTake);
 
-            healthStat?.DecreaseStat(damageToTake);
+            healthStat?.ChangeCurrentValue(-damageToTake);
 
             if (damageMitigation != 1)
             {
@@ -55,12 +54,12 @@ public class CharacterHealth : MonoBehaviour
                 onDefense?.Invoke(sender);
             }
 
-            if (healthStat.GetCurrentStat() <= 0 && !dead)
+            if (healthStat.GetCurrentValue() <= 0 && !dead)
             {
                 dead = true;
                 onDeath?.Invoke();
             }
-            else if (healthStat.GetCurrentStat() > 0)
+            else if (healthStat.GetCurrentValue() > 0)
             {
                 charInvencibility?.StartIFrames();
             }
@@ -74,7 +73,7 @@ public class CharacterHealth : MonoBehaviour
 
     public void Heal(float amount)
     {
-        healthStat?.IncreaseStat(amount);
+        healthStat?.ChangeCurrentValue(amount);
 
         onHeal?.Invoke();
     } 
@@ -96,10 +95,5 @@ public class CharacterHealth : MonoBehaviour
         onRevive?.Invoke();
 
         //Heal(healthStat.GetMaxStat() / 2);
-    }
-
-    public void DebugSomething(string message)
-    {
-        Debug.Log(message);
     }
 } 

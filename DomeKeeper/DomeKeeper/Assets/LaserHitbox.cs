@@ -20,35 +20,59 @@ public class laserHitbox : MonoBehaviour
 
     [SerializeField] private UnityEvent<GameObject> onHit;
 
-    private IEnumerator DealDamage()
+    private bool canDealDamage, onCD;
+
+    private void Update()
     {
-        while (true)
+        if (canDealDamage && !onCD)
         {
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, range, enemiesLayer);
+            DealDamage();
+        }
+    }
 
-            foreach (Collider2D enemy in hitEnemies)
+    private void DealDamage()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, range, enemiesLayer);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponentInChildren<CharacterHealth>()?.TakeDamage(damage.GetValue() + ApplyCritical(), gameObject);
+
+            if (applyLightning.CheckLightning())
             {
-                enemy.GetComponentInChildren<CharacterHealth>()?.TakeDamage(damage.GetCurrentStat() + ApplyCritical(), gameObject);
-
-                if (applyLightning.CheckLightning())
-                {
-                    enemy.GetComponentInChildren<LightningChain>().Chain(applyLightning.GetLightningSpread());
-                }
-
-                applySplash.Splash();
-
-                onHit?.Invoke(enemy.gameObject);
+                enemy.GetComponentInChildren<LightningChain>().Chain(applyLightning.GetLightningSpread());
             }
 
-            yield return new WaitForSeconds(damageCD.GetCurrentStat());
+            applySplash.Splash();
+
+            onHit?.Invoke(enemy.gameObject);
         }
+
+        if (hitEnemies.Length > 0)
+        {
+            StartCoroutine(OnCD());
+        }
+    }
+
+    private IEnumerator OnCD()
+    {
+        onCD = true;
+
+        yield return new WaitForSeconds(damageCD.GetValue());
+
+        onCD = false;
+    }
+
+    public void SetCanDealDamage(bool can)
+    {
+        canDealDamage = can;
     }
 
     private float ApplyCritical()
     {
         if (criticalChance.CheckChance())
         {
-            float critDamage = damage.GetCurrentStat() * criticalDamage.GetCurrentStat();
+            float critDamage = damage.GetValue() * criticalDamage.GetValue();
             return critDamage;
         }
 
@@ -58,16 +82,6 @@ public class laserHitbox : MonoBehaviour
     public void SetRange(float newRange)
     {
         range = newRange;
-    }
-
-    private void OnEnable()
-    {
-        StartCoroutine(DealDamage());
-    }
-
-    private void OnDisable()
-    {
-        StopCoroutine(DealDamage());   
     }
 
     private void OnDrawGizmosSelected()

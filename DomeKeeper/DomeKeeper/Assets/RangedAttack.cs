@@ -23,7 +23,7 @@ public class RangedAttack : MonoBehaviour
 
     public void ShootBullets()
     {
-        for (int i = 0; i < bulletsAmount.GetCurrentStat(); i++)
+        for (int i = 0; i < bulletsAmount.GetValue(); i++)
         {
             GameObject projectile = Instantiate(projectilePrefab, pos[i].position, Quaternion.identity);
             projectile.GetComponent<Rigidbody2D>().velocity = pos[i].forward * projectileForce;

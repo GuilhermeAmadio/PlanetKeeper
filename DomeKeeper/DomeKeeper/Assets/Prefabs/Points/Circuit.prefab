@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -1932990833954130659, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: chance
       value: 
-      objectReference: {fileID: 11400000, guid: d531fbd1fcd9e34409561133a8bd1ad7, type: 2}
+      objectReference: {fileID: 11400000, guid: baf8d37127cb26d4192335eed27a3481, type: 2}
     - target: {fileID: 857938482046558508, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: type
       value: 1
@@ -19,7 +19,7 @@ PrefabInstance:
     - target: {fileID: 857938482046558508, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: pointIncrease
       value: 
-      objectReference: {fileID: 11400000, guid: 65687aef59f9fb140916beae74a4f9f3, type: 2}
+      objectReference: {fileID: 11400000, guid: 5d5a9b5e28a58eb418d4933b75ac7cb8, type: 2}
     - target: {fileID: 2006232109666068003, guid: 683152da7bdd244469f344ab21b016ea, type: 3}
       propertyPath: m_Name
       value: Circuit

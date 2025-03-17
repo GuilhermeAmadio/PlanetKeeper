@@ -5,54 +5,49 @@ using UnityEngine;
 
 public class CharacterStat : MonoBehaviour
 {
-    public FloatStatsSO floatStat;
+    public StatSO stat;
 
-    private IStatable stat;
+    private IStatable statI;
 
     private void Awake()
     {
-        stat = GetComponent<IStatable>();
-        floatStat.UpdateMaxValue();
+        statI = GetComponent<IStatable>();
+
+        stat.InitializeStat();
     }
 
     public void ChangeStat(float amount)
     {
-        stat.ChangeStat(amount);
+        stat.ChangeValue(amount);
     }
 
-    public void IncreaseStat(float amount)
+    public void ChangeCurrentValue(float amount)
     {
-        stat.IncreaseStat(amount);
-    }
-
-    public void DecreaseStat(float amount)
-    {
-        stat.DecreaseStat(amount);
+        statI.ChangeCurrentValue(amount);
     }
 
     public void SetMaxStat(float amount)
     {
-        stat.SetMaxStat(amount);
+        stat.SetMaxValue(amount);
     }
 
-
-    public float GetBaseStat()
+    public float GetValue()
     {
-        return floatStat.GetBaseValue();
+        return stat.GetValue();
     }
 
-    public float GetMaxStat()
+    public float GetCurrentValue()
     {
-        return floatStat.GetMaxValue();
+        return statI.GetCurrentValue();
     }
 
-    public float GetCurrentStat()
+    public float GetMaxValue()
     {
-        return stat.GetCurrentStat();
+        return stat.GetMaxValue();
     }
 
-    public FloatStatsSO GetFloatStat()
+    public StatSO GetStat()
     {
-        return floatStat;
+        return stat;
     }
 }
