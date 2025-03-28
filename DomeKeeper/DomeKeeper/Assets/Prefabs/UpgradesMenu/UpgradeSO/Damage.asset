@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: Damage
   m_EditorClassIdentifier: 
   upgradeName: Damage
+  upgradeSprite: {fileID: 21300000, guid: 571bd5f6a1bf85348a87026188c05fab, type: 3}
+  statActivated: {fileID: 0}
+  stat: {fileID: 11400000, guid: 49acaba21c15c224384bb47cb4a7f91a, type: 2}
   upgradesInfo:
-  - cost: 1
+  - type: 0
+    cost: 1
     upgradeValue: 1
-  - cost: 5
-    upgradeValue: 10
+    upgraded: 1
+  - type: 0
+    cost: 3
+    upgradeValue: 1
+    upgraded: 1

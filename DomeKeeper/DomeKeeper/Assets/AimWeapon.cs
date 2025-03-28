@@ -19,6 +19,6 @@ public class AimWeapon : MonoBehaviour
 
         Quaternion newRot = Quaternion.Euler(0f, 0f, angle);
         
-        transform.rotation = Quaternion.Slerp(transform.rotation, newRot, Time.deltaTime * speed.GetValue());
+        transform.rotation = Quaternion.Slerp(transform.rotation, newRot, Time.deltaTime * speed.GetCurrentValue());
     }
 }

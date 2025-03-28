@@ -31,7 +31,7 @@ public class CharacterHealth : MonoBehaviour
         if (!invencible)
         {
             if (armor != null)
-                amount -= armor.GetValue();
+                amount -= armor.GetCurrentValue();
 
             if (amount < 0)
             {

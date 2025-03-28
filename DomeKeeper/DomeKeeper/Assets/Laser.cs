@@ -32,8 +32,8 @@ public class Laser : MonoBehaviour
     private void Start()
     {
         DisableLaser();
-        lr.startWidth = laserSize.GetValue();
-        laserHitbox.SetRange(laserSize.GetValue());
+        lr.startWidth = laserSize.GetCurrentValue();
+        laserHitbox.SetRange(laserSize.GetCurrentValue());
     }
 
     private void Update()
@@ -124,7 +124,7 @@ public class Laser : MonoBehaviour
         DisableLaser();
         canShoot = false;
 
-        yield return new WaitForSeconds(energyRecovery.GetValue());
+        yield return new WaitForSeconds(energyRecovery.GetCurrentValue());
 
         canShoot = true;
     }

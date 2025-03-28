@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Stat", menuName = "Stats/New Stat")]
 public class StatSO : ScriptableObject
 {
-    public float baseValue, currentValue, maxValue;
+    public float baseValue, currentValue, upgradedValue, maxValue;
 
     public bool hasMaxValue, maxValueEqualToValue, initialZero;
 
@@ -15,7 +15,7 @@ public class StatSO : ScriptableObject
     {
         if (hasMaxValue && maxValueEqualToValue)
         {
-            maxValue = baseValue;
+            maxValue = baseValue + upgradedValue;
         }
 
         if (initialZero)
@@ -24,13 +24,18 @@ public class StatSO : ScriptableObject
         }
         else
         {
-            currentValue = baseValue;
+            currentValue = baseValue + upgradedValue;
         }
+    }
+
+    public float GetBaseValue()
+    {
+        return baseValue;
     }
 
     public float GetValue()
     {
-        return baseValue;
+        return baseValue + upgradedValue;
     }
 
     public float GetCurrentValue()
@@ -68,6 +73,16 @@ public class StatSO : ScriptableObject
         }
 
         onCurrentValueChanged?.onFuncionCalled.Invoke();
+    }
+     
+    public void UpgradeValue(float amount)
+    {
+        upgradedValue += amount;
+    }
+
+    public void ResetUpgrade()
+    {
+        upgradedValue = 0f;
     }
 
     public void SetMaxValue(float amount)

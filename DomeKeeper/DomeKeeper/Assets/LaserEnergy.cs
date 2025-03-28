@@ -21,7 +21,7 @@ public class LaserEnergy : MonoBehaviour
         {
             if (energyValue.GetCurrentValue() <= energyValue.GetMaxValue())
             {
-                energyValue.ChangeCurrentValue(energyRegen.GetValue() * Time.deltaTime);
+                energyValue.ChangeCurrentValue(energyRegen.GetCurrentValue() * Time.deltaTime);
             }
         }
     }

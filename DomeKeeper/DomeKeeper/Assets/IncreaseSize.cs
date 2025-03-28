@@ -10,6 +10,6 @@ public class IncreaseSize : MonoBehaviour
 
     private void Start()
     {
-        transformToIncrease.localScale = new Vector3(transformToIncrease.localScale.x + sizeStat.GetValue(), transformToIncrease.localScale.y + sizeStat.GetValue(), 1f);
+        transformToIncrease.localScale = new Vector3(transformToIncrease.localScale.x + sizeStat.GetCurrentValue(), transformToIncrease.localScale.y + sizeStat.GetCurrentValue(), 1f);
     }
 }

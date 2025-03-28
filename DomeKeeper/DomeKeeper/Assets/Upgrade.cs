@@ -1,17 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour, IClickable
 {
     [SerializeField] private UpgradeSO upgradeInfo;
 
-    [SerializeField] private StatSO rock, circuit, matter;
+    [SerializeField] private MoneyStatType[] moneyTypes;
 
+    [SerializeField] private SpriteRenderer upgradeSprite;
     [SerializeField] private TMPro.TextMeshPro upgradeNametext, upgradeCostText;
 
-    [SerializeField] private IncreaseStat statToUpgrade;
+    //[SerializeField] private IncreaseStat statToUpgrade;
 
     [SerializeField] private UpgradeConnection[] upgradeConnections;
 
@@ -21,36 +24,37 @@ public class Upgrade : MonoBehaviour, IClickable
     private void Start()
     {
         upgradeNametext.text = upgradeInfo.GetUpgradeName();
+        upgradeSprite.sprite = upgradeInfo.GetUpgradeSprite();
+
+        for (int i = 0; i < upgradeInfo.GetUpgradeInfoLength(); i++)
+        {
+            index = i;
+            if (!upgradeInfo.GetUpgraded(i))
+            {
+                break;
+            }
+        }
+
         UpdateUpgradeCost();
     }
 
     public void Buy()
     {
-        StatSO money = null;
-
-        if (upgradeInfo.GetMoneyType(index) == MoneyType.ROCK)
+        if (canBuy)
         {
-            money = rock;
-        }
-        else if (upgradeInfo.GetMoneyType(index) == MoneyType.CIRCUIT)
-        {
-            money = circuit;
-        }
-        else
-        {
-            money = matter;
-        }
+            StatSO money = Array.Find(moneyTypes, moneyType => moneyType.moneyType == upgradeInfo.GetMoneyType(index)).stat;
 
-        if (money.GetValue() >= upgradeCost && canBuy)
-        {
-            statToUpgrade.Increase(upgradeInfo.GetUpgradeValue(index));
+            if (money.GetValue() >= upgradeCost && canBuy)
+            {
+                money.ChangeValue(-upgradeCost);
 
-            money.ChangeValue(-upgradeCost);
+                upgradeInfo.Upgrade(index);
+                index++;
 
-            index++;
-            CheckConnections();
+                CheckConnections();
 
-            UpdateUpgradeCost();
+                UpdateUpgradeCost();
+            }
         }
     }
 
@@ -58,8 +62,6 @@ public class Upgrade : MonoBehaviour, IClickable
     {
         if (index >= upgradeInfo.GetUpgradeInfoLength())
         {
-            //aqui eu desabilito o upgrade
-
             canBuy = false;
 
             return;
@@ -84,4 +86,11 @@ public class Upgrade : MonoBehaviour, IClickable
     {
         Buy();
     }
+}
+
+[System.Serializable]
+public class MoneyStatType
+{
+    public MoneyType moneyType;
+    public StatSO stat;
 }

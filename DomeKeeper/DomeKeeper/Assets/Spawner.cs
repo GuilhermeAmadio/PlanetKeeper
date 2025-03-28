@@ -49,9 +49,9 @@ public class Spawner : MonoBehaviour
     {
         ciclo++;
 
-        float cicloTimer = spawnRate / enemiesToSpawnQuant.GetValue();
+        float cicloTimer = spawnRate / enemiesToSpawnQuant.GetCurrentValue();
 
-        for(int i = 0; i < enemiesToSpawnQuant.GetValue(); i++)
+        for(int i = 0; i < enemiesToSpawnQuant.GetCurrentValue(); i++)
         {
             SpawnEnemy();
 

@@ -28,13 +28,13 @@ public class ApplyLightning : MonoBehaviour
     {
         canLightning = false;
 
-        yield return new WaitForSeconds(lightningCDStat.GetValue());
+        yield return new WaitForSeconds(lightningCDStat.GetCurrentValue());
 
         canLightning = true;
     }
 
     public float GetLightningSpread()
     {
-        return lightningSpread.GetValue();
+        return lightningSpread.GetCurrentValue();
     }
 }

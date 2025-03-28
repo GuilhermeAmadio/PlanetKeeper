@@ -36,7 +36,7 @@ public class laserHitbox : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponentInChildren<CharacterHealth>()?.TakeDamage(damage.GetValue() + ApplyCritical(), gameObject);
+            enemy.GetComponentInChildren<CharacterHealth>()?.TakeDamage(damage.GetCurrentValue() + ApplyCritical(), gameObject);
 
             if (applyLightning.CheckLightning())
             {
@@ -58,7 +58,7 @@ public class laserHitbox : MonoBehaviour
     {
         onCD = true;
 
-        yield return new WaitForSeconds(damageCD.GetValue());
+        yield return new WaitForSeconds(damageCD.GetCurrentValue());
 
         onCD = false;
     }
@@ -72,7 +72,7 @@ public class laserHitbox : MonoBehaviour
     {
         if (criticalChance.CheckChance())
         {
-            float critDamage = damage.GetValue() * criticalDamage.GetValue();
+            float critDamage = damage.GetCurrentValue() * criticalDamage.GetCurrentValue();
             return critDamage;
         }
 

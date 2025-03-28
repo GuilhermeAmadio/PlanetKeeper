@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f4e95fc44d57245883710497407f85, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  value: 0
+  baseValue: 2
+  currentValue: 16
+  upgradedValue: 0
   maxValue: 0
   hasMaxValue: 0
   maxValueEqualToValue: 0
+  initialZero: 0
   onCurrentValueChanged: {fileID: 11400000, guid: 9a09d6000223eba419c149cec266640b, type: 2}

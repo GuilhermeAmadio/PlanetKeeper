@@ -39,7 +39,7 @@ public class ApplySplash : MonoBehaviour
     {
         canSplash = false;
 
-        yield return new WaitForSeconds(splashCDStat.GetValue());
+        yield return new WaitForSeconds(splashCDStat.GetCurrentValue());
 
         canSplash = true;
     }

@@ -9,4 +9,5 @@ public class UpgradeInfo
     public MoneyType type;
     public int cost;
     public float upgradeValue;
+    public bool upgraded;
 }

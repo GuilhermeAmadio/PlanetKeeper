@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f4e95fc44d57245883710497407f85, type: 3}
   m_Name: DamagePlayer
   m_EditorClassIdentifier: 
-  baseValue: 3
-  currentValue: 3
+  baseValue: 1
+  currentValue: 13
+  upgradedValue: 0
   maxValue: 0
   hasMaxValue: 0
   maxValueEqualToValue: 0

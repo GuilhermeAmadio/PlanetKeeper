@@ -29,7 +29,7 @@ public class DoActionWithCD : MonoBehaviour
 
     public void DoActionAlways()
     {
-        InvokeRepeating("DoAction", 0f, cdStat.GetValue());
+        InvokeRepeating("DoAction", 0f, cdStat.GetCurrentValue());
     }
 
     private IEnumerator DoActionCD()
@@ -37,7 +37,7 @@ public class DoActionWithCD : MonoBehaviour
         canDoAction = false;
         action.Invoke();
 
-        yield return new WaitForSeconds(cdStat.GetValue());
+        yield return new WaitForSeconds(cdStat.GetCurrentValue());
 
         canDoAction = true;
     }
